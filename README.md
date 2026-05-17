@@ -1,4 +1,4 @@
-# Peblo Notes
+<img width="1919" height="932" alt="Screenshot 2026-05-17 103804" src="https://github.com/user-attachments/assets/99e9fda7-c494-4cb7-baa2-623b29610c22" /># Peblo Notes
 
 Peblo Notes is a professional, minimalist, AI-powered collaborative notes workspace. It allows users to securely capture ideas, organize them with tags, share notes publicly, and leverage state-of-the-art AI models to instantly generate summaries and actionable items.
 
@@ -11,6 +11,11 @@ Peblo Notes is a professional, minimalist, AI-powered collaborative notes worksp
 - **Public Sharing**: Generate unique, secure links to share read-only versions of notes with a high-end typography layout.
 - **Productivity Dashboard**: Visual analytics using Recharts to track note-taking trends and activity.
 
+---
+
+## 🎥 Demo Video
+Check out the application in action by watching the demo video:
+[Watch Demo Video](./demo/demo.mp4)
 ---
 
 ## 🏗️ System Architecture
@@ -184,4 +189,9 @@ The frontend receives the user's notes with all associated metadata, ready to be
 ```
 
 ### 4. Screenshots
-*Please review the demo video or include your own screenshots in the repository root to showcase the UI.*
+<img width="1918" height="935" alt="Screenshot 2026-05-17 103814" src="https://github.com/user-attachments/assets/d8ef8982-04c3-4cc1-bfe8-350499bb65e7" />
+<img width="1918" height="929" alt="Screenshot 2026-05-17 103821" src="https://github.com/user-attachments/assets/5d315eae-a210-49fe-8cc5-0731279dfd7d" />
+<img width="1919" height="924" alt="Screenshot 2026-05-17 103726" src="https://github.com/user-attachments/assets/5d97b004-1b7f-4fb0-8148-f93a8e9a6b30" />
+<img width="1913" height="934" alt="Screenshot 2026-05-17 103738" src="https://github.com/user-attachments/assets/96483882-e652-4321-941d-04123d29709f" />
+<img width="1919" height="932" alt="Screenshot 2026-05-17 103804" src="https://github.com/user-attachments/assets/1eb53c16-dd7f-425f-92e5-c016b1130c56" />
+
