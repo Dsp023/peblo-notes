@@ -1,4 +1,6 @@
-<img width="1919" height="932" alt="Screenshot 2026-05-17 103804" src="https://github.com/user-attachments/assets/99e9fda7-c494-4cb7-baa2-623b29610c22" /># Peblo Notes
+<p align="center">
+  <img src="assets/logo.png" width="120" alt="Peblo Notes Logo" />
+</p>
 
 Peblo Notes is a professional, minimalist, AI-powered collaborative notes workspace. It allows users to securely capture ideas, organize them with tags, share notes publicly, and leverage state-of-the-art AI models to instantly generate summaries and actionable items.
 
