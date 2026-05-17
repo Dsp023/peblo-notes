@@ -102,3 +102,86 @@ Navigate to `http://localhost:3000`.
 1. **Theme Toggle**: Test the Sun/Moon icon in the sidebar.
 2. **AI Processing**: Click "Generate Insights" to verify Llama 3.3 parsing.
 3. **Public View**: Share a note and open the link in incognito mode.
+
+---
+
+## 📊 Sample Outputs
+
+As part of the assignment requirements, here are examples demonstrating the application's core functionality and data structures.
+
+### 1. Database Schema
+Our Prisma schema defines a clean relational structure between Users, Notes, and Tags, including AI fields:
+```prisma
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String
+  notes     Note[]
+  createdAt DateTime @default(now())
+}
+
+model Note {
+  id          String   @id @default(uuid())
+  title       String
+  content     String
+  isPublic    Boolean  @default(false)
+  user        User     @relation(fields: [userId], references: [id])
+  userId      String
+  tags        Tag[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // AI related fields
+  summary     String?
+  actionItems String?
+}
+
+model Tag {
+  id      String @id @default(uuid())
+  name    String
+  note    Note   @relation(fields: [noteId], references: [id], onDelete: Cascade)
+  noteId  String
+}
+```
+
+### 2. AI-Generated Summary Example
+When the Llama 3.3 model processes a note, it structures the response in JSON for the backend to consume and store:
+```json
+{
+  "summary": "This note outlines the project kickoff for Peblo AI Workspace, emphasizing Llama 3.3 integration, dual-theme support, and a secure public sharing system. Key priorities include optimizing for SQLite initially with plans for a PostgreSQL migration.",
+  "actionItems": [
+    "Integrate Llama 3.3 for summarization",
+    "Implement dual-theme engine",
+    "Build secure public sharing system"
+  ]
+}
+```
+
+### 3. Example API Response (`GET /api/notes`)
+The frontend receives the user's notes with all associated metadata, ready to be displayed in the UI:
+```json
+[
+  {
+    "id": "c1f13b4c-9745-42cf-9a99-b1d5c7f8a12b",
+    "title": "Project Kickoff: Peblo AI Workspace",
+    "content": "We are officially launching the Peblo Notes project today...",
+    "isPublic": false,
+    "userId": "u1d90a9b-1234-4567-89ab-abcdef123456",
+    "createdAt": "2026-05-16T10:00:00.000Z",
+    "updatedAt": "2026-05-16T10:05:00.000Z",
+    "tags": [
+      {
+        "id": "t9a8b7c6-1234-5678-abcd-ef0123456789",
+        "name": "startup",
+        "noteId": "c1f13b4c-9745-42cf-9a99-b1d5c7f8a12b"
+      }
+    ],
+    "summary": "This note outlines the project kickoff for Peblo AI Workspace...",
+    "actionItems": "[\"Integrate Llama 3.3 for summarization\", \"Implement dual-theme engine\", \"Build secure public sharing system\"]"
+  }
+]
+```
+
+### 4. Screenshots
+*Please review the demo video or include your own screenshots in the repository root to showcase the UI.*
