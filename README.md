@@ -2,7 +2,7 @@
   <img src="assets/logo.png" width="120" alt="Peblo Notes Logo" />
 </p>
 
-Peblo Notes is a professional, minimalist, AI-powered collaborative notes workspace. It allows users to securely capture ideas, organize them with tags, share notes publicly, and leverage state-of-the-art AI models to instantly generate summaries and actionable items.
+## Peblo Notes is a professional, minimalist, AI-powered collaborative notes workspace. It allows users to securely capture ideas, organize them with tags, share notes publicly, and leverage state-of-the-art AI models to instantly generate summaries and actionable items.
 
 ## 🌟 Key Features
 
